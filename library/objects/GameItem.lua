@@ -1,0 +1,26 @@
+---@meta
+
+---@class GameItem
+---@field GetOwner          fun(self: GameItem): Character|Actor
+---@field GetOwnerInventory fun(self: GameItem): Inventory
+---@field GetId             fun(self: GameItem): integer
+---@field GetName           fun(self: GameItem): string
+---@field GetShortDesc      fun(self: GameItem): string
+---@field GetLongDesc       fun(self: GameItem): string
+---@field GetStackSize      fun(self: GameItem): integer, integer
+---@field SetStackSize      fun(self: GameItem, stackSize: integer)
+---@field CanUseGameItem        fun(self: GameItem, player: Character): boolean
+---Integer stats: CurrentEnchantID, ActiveAmmunition, MaxStackSize,
+---               CreationTime, GameItemVersion, SpellcastID,
+---               DrinkAmount, FoodAmount, GameItemTier
+---@field GetIntStat        fun(self: GameItem, stat: string): integer
+---@field SetIntStat        fun(self: GameItem, stat: string, value: integer): boolean
+---Float stats: ArmorValue, EncumbranceWeight, MaxDurability,
+---             CurrentDurability, BurnTime
+---@field GetFloatStat      fun(self: GameItem, stat: string): number
+---@field SetFloatStat      fun(self: GameItem, stat: string, value: number): boolean
+---@field GetDurability     fun(self: GameItem): integer, integer
+---@field ModifyDurability  fun(self: GameItem, value: number)
+---@field SetDurability     fun(self: GameItem, value: number)
+---@field IsBroken          fun(self: GameItem): boolean
+---@field DeleteGameItem        fun(self: GameItem, quantity?: integer): boolean
