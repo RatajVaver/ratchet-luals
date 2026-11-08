@@ -1,0 +1,17 @@
+---@meta
+
+---@class CharacterSheet
+---@field name string
+---@field skills table
+---@field skillsAllocated table
+---@field skillsTotal table
+---@field stats table
+---@field statsCurrent table
+---@field statsMax table
+---@field perksActive table
+---@field perksCategories table
+---@field perksAssigned table
+---@field statuses table
+---@field buffs table
+---@field zones table
+---@field runes table

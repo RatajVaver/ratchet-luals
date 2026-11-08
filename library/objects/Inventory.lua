@@ -1,0 +1,69 @@
+---@meta
+
+---@class Inventory
+---@field GetAllItems    fun(self: Inventory): Item[]
+---@field GetItemByIndex fun(self: Inventory, index: integer): Item|nil
+---@field GetItemById    fun(self: Inventory, templateId: integer): Item|nil
+---@field HasItem        fun(self: Inventory, templateId: integer, quantity?: integer): boolean
+---@field CountItems     fun(self: Inventory, templateId: integer): integer
+---@field SpawnItem      fun(self: Inventory, templateId: integer): Item, integer
+---@field DeleteItem     fun(self: Inventory, templateId: integer, quantity?: integer): boolean
+---@field DeleteAllItems fun(self: Inventory)
+---@field MoveItems      fun(self: Inventory, target: Inventory, templateId: integer, quantity?: integer): boolean
+---@field GetItemIndex   fun(self: Inventory, item: Item): integer
+---@field FindItemById   fun(self: Inventory, templateId: integer, startIndex?: integer): integer
+---@field DropItem       fun(self: Inventory, index: integer, invokingPlayer: Character)
+
+
+
+---Get an inventory from an owner by type ID or type name.
+---
+---Inventory type IDs:
+---
+---  0  Backpack
+---
+---  1  Equipment
+---
+---  2  ShortcutBar
+--- 
+---  3  Recipes
+--- 
+---  4  PlaceableInventory
+--- 
+---  5  CraftingQueue
+--- 
+---  6  Feats
+--- 
+---  7  Emotes
+--- 
+---  8  CraftingArtisanInventory
+--- 
+---  9  CraftingArtisanRecipeInventory
+--- 
+---  10 SiegeWeaponCounterWeightInventory
+--- 
+---  11 WeaponInventory
+--- 
+---  12 PetInventory
+--- 
+---  13 CraftingIngredientsInventory
+--- 
+---  14 DismantlerInventory
+--- 
+---  15 Spells
+--- 
+---  16 VisualIllusionSource
+--- 
+---  17 VisualIllusionTarget
+--- 
+---  18 VisualIllusionResult
+--- 
+---  19 GolemParts
+--- 
+---  20 Workorders
+--- 
+---  21 Patrons
+---@param owner Character|Actor
+---@param inventoryType integer|string
+---@return Inventory|nil
+function getInventoryByType(owner, inventoryType) end
